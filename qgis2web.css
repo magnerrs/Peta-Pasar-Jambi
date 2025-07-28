@@ -1,0 +1,69 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#main-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Kolom kiri: Map */
+.col9 {
+    flex: 1;
+    height: 100%;
+}
+
+/* Kolom kanan: Panel info */
+.col3 {
+    width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+/* Map */
+#map {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+/* Search bar */
+#searchBar {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Panel info */
+#info-box {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #444;
+}
+
+textarea {
+    font-family: Arial;
+    font-size: 14px;
+    resize: vertical;
+}
+
+/* Optional: tombol kirim */
+button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
