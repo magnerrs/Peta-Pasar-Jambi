@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Admin Pasar</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <div class="logo-wrapper">
+        <img src="images/kotajambi.png" alt="Logo Kota Jambi">
+    </div>
+
+    <div id="loginContainer">
+        <input type="text" id="username" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" />
+        <button onclick="login()">Login</button>
+        <p id="loginError"></p>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/qgis2web_expressions.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/L.Control.Layers.Tree.min.js"></script>
+    <script src="js/leaflet.rotatedMarker.js"></script>
+    <script src="js/leaflet.pattern.js"></script>
+    <script src="js/leaflet-hash.js"></script>
+    <script src="js/Autolinker.min.js"></script>
+    <script src="js/rbush.min.js"></script>
+    <script src="js/labelgun.min.js"></script>
+    <script src="js/labels.js"></script>
+    <script src="data/pasarjambidata_pasar_tradisional_jambi_1.js"></script>
+    <script src="data/Buffered_2.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Script Login -->
+<script>
+    function login() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Dummy login admin
+        if (username === "admin" && password === "123456") {
+            localStorage.setItem("isLoggedIn", "true");
+            localStorage.setItem("role", "admin");
+            window.location.href = "admin.html"; // redirect ke halaman admin
+        } else {
+            document.getElementById("loginError").innerText = "Username atau password salah.";
+        }
+    }
+</script>
+
+</body>
+</html>
+
+</body>
+
+</html>
