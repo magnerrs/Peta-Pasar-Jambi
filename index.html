@@ -15,13 +15,14 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />  
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
-    <link rel="stylesheet" href="https://unpkg.com/[email protected]/dist/leaflet.css"crossorigin="" />
-    
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="js/qgis2web_expressions.js"></script>
     <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.min.js"></script>
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-    <script src="https://unpkg.com/[email protected]/dist/leaflet.js"crossorigin=""></script>
     <script src="js/L.Control.Layers.Tree.min.js"></script>
     <script src="js/leaflet.rotatedMarker.js"></script>
     <script src="js/leaflet.pattern.js"></script>   
@@ -230,7 +231,7 @@
 
         map.createPane('pane_OSMStandard_0');
         map.getPane('pane_OSMStandard_0').style.zIndex = 400;
-        var layer_OSMStandard_0 = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        var layer_OSMStandard_0 = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             pane: 'pane_OSMStandard_0',
             opacity: 1.0,
             attribution: '<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
@@ -929,12 +930,7 @@ function tampilkanRute(namaPasar) {
     });
 
     const latTujuan = koordinatPasar[namaPasar][0];
-const lngTujuan = koordinatPasar[namaPasar][1];
-
-const url = `https://www.google.com/maps/dir/?api=1&origin=${lokasiSaya.lat},${lokasiSaya.lng}&destination=${latTujuan},${lngTujuan}&travelmode=driving`;
-
-window.open(url, '_blank');
-
+    const lngTujuan = koordinatPasar[namaPasar][1];
 }
 </script>
 
